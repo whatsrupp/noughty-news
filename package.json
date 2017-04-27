@@ -1,0 +1,26 @@
+{
+  "name": "noughty-news",
+  "version": "0.6.9",
+  "description": "A small news app that delivers articles of nought value",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatsrupp/noughty-news.git"
+  },
+  "keywords": [
+    "news",
+    "guardian"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whatsrupp/noughty-news/issues"
+  },
+  "homepage": "https://github.com/whatsrupp/noughty-news#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
