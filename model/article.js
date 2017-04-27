@@ -8,11 +8,18 @@
     this.url = articleData.pageUrl;
   }
 
-  Article.prototype.image = function() {
+  Article.prototype.generateImage = function() {
     div = document.createElement('div');
     div.innerHTML = this.body;
     imageurl = div.getElementsByTagName('img')[0].src;
     this.image = imageurl;
+
   };
+
+  Article.prototype.generateSummary = function() {
+      this.summary = generateSentences(this.url);
+  };
+
   exports.Article = Article;
+
 })(this);

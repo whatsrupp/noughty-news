@@ -23,6 +23,15 @@
   return article;
 }
 
+  function createList(url) {
+    for (var i = 0; i < 10; i++) {
+      createArticle(url, i);
+    }
+  }
+  exports.articleList = articleList;
+  exports.createList = createList;
 
+  // testing
   exports.createArticle = createArticle;
+  
 })(this);
