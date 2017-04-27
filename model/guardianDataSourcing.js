@@ -31,4 +31,7 @@
   }
   exports.articleList = articleList;
   exports.createList = createList;
+
+  // testing
+  exports.createArticle = createArticle;
 })(this);
