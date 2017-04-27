@@ -18,6 +18,11 @@ var assert = {
         throw new Error (assertionToCheck + " and " + matcher + "are identical arrays!")
       }
     }
+  },
+  isOfType: function(object, type) {
+    if ((typeof object) !== type) {
+      throw new Error(object + " is not a " + type + "!")
+    }
   }
 };
 
