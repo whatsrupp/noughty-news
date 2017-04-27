@@ -1,6 +1,7 @@
-# Noughty News
+# Noughty News ![alt text](https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/news-128.png)
+
 ## Delivering news of absolutely nought value.
-![alt text] (http://www.flaticon.com/free-icon/newspaper_4442)
+
 A small single page javascript news app that parses real news articles using the Guardian API.
 It then summarises and displays the articles using Aylien API.
 
