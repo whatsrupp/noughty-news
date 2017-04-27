@@ -7,7 +7,7 @@
       return xmlHttp.responseText;
   }
 
-  function getArticleData(index, json) {
+  function getArticleData(json, index) {
     var headline = json.response.results[index].webTitle;
     var body = json.response.results[index].fields.body;
     var pageUrl = json.response.results[index].webUrl;
@@ -16,16 +16,19 @@
 
   var articleList = [];
 
-  function createArticleList(url) {
+  function createArticle(url, i) {
   var data = httpGet(url);
   var json = JSON.parse(data);
-  var listLength = json.response.results.length;
-  for (var j = 0; j < 9; i++);{
-    articleData = getArticleData(j, json);
-    article = new Article(articleData);
-    articleList.push(article);
-  }
+  articleData = getArticleData(json, i);
+  article = new Article(articleData);
+  articleList.push(article);
 }
+
+  function createList(url) {
+    for (var i = 0; i < 10; i++) {
+      createArticle(url, i);
+    }
+  }
   exports.articleList = articleList;
-  exports.createArticleList = createArticleList;
+  exports.createList = createList;
 })(this);
