@@ -15,8 +15,8 @@ var AYLIENTextAPI = require('aylien_textapi'),
   parseString = require('xml2js').parseString;
 
   var textapi = new AYLIENTextAPI({
-    application_id: 'd78e0c77',
-    application_key: '2b3c78c9b8ad4a92a2b009f4686fa22c'
+    application_id: 'ID',
+    application_key: 'KEY'
   });
 
 // request('http://feeds.bbci.co.uk/news/rss.xml', function (error, response, body) {
