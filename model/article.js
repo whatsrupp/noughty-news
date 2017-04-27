@@ -14,5 +14,6 @@
     imageurl = div.getElementsByTagName('img')[0].src;
     this.image = imageurl;
   };
+
   exports.Article = Article;
 })(this);
