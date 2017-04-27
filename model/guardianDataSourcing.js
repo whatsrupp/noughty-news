@@ -14,21 +14,15 @@
     return {'headline': headline,'body': body, 'pageUrl': pageUrl};
   }
 
-  var articleList = [];
 
   function createArticle(url, i) {
   var data = httpGet(url);
   var json = JSON.parse(data);
   articleData = getArticleData(json, i);
   article = new Article(articleData);
-  articleList.push(article);
+  return article;
 }
 
-  function createList(url) {
-    for (var i = 0; i < 10; i++) {
-      createArticle(url, i);
-    }
-  }
-  exports.articleList = articleList;
-  exports.createList = createList;
+
+  exports.createArticle = createArticle;
 })(this);
