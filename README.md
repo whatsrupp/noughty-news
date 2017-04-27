@@ -7,7 +7,7 @@ It then summarises and displays the articles using Aylien API.
 
 
 ## Set Up
-(We're assuming you're on a mac, vaguely know what you're and that you have homebrew installed. Install [homebrew here](https://brew.sh/). This isn't overly helpful but we've been learning for only 7 weeks so be gentle)
+(We're assuming you're on a mac, vaguely know what you're doing and that you have homebrew installed. Install [homebrew here](https://brew.sh/). This isn't overly helpful but we've been learning for only 7 weeks so be gentle)
 
 ### Install Node
 
