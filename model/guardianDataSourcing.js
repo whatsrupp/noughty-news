@@ -14,14 +14,13 @@
     return {'headline': headline,'body': body, 'pageUrl': pageUrl};
   }
 
-  var articleList = [];
 
   function createArticle(url, i) {
   var data = httpGet(url);
   var json = JSON.parse(data);
   articleData = getArticleData(json, i);
   article = new Article(articleData);
-  articleList.push(article);
+  return article;
 }
 
   function createList(url) {
@@ -34,4 +33,5 @@
 
   // testing
   exports.createArticle = createArticle;
+  
 })(this);
