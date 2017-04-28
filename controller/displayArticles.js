@@ -1,8 +1,18 @@
 (function(exports){
 
-  // var articleList = articleList.list
+  function displayArticles(){
+    var listOfArticles = articleList.listOfNewsArticles;
+    var numberOfArticles= listOfArticles.length;
+    for (i=0; i<numberOfArticles; i++){
+      var article = listOfArticles[i];
+      setUpNewsArticleItem(article,i);
+    }
 
+  }
 
+  function addSummary(){
+
+  }
 
   function setUpNewsArticleItem(article, index){
     var headlineText = article.headline;
@@ -32,7 +42,7 @@
     // var summary = document.createElement('p');
 
   }
-
+  exports.displayArticles = displayArticles;
   exports.setUpNewsArticleItem = setUpNewsArticleItem;
 
 })(this)

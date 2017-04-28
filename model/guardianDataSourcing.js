@@ -7,22 +7,27 @@
       return xmlHttp.responseText;
   }
 
-  function getArticleData(json, index) {
-    var headline = json.response.results[index].webTitle;
-    var body = json.response.results[index].fields.body;
-    var pageUrl = json.response.results[index].webUrl;
+  function generateArticleData(url) {
+    var data = httpGet(url);
+    var allArticleData = JSON.parse(data);
+    return allArticleData
+  }
+
+  function getArticleData(allArticleData, index) {
+    var headline = allArticleData.response.results[index].webTitle;
+    var body = allArticleData.response.results[index].fields.body;
+    var pageUrl = allArticleData.response.results[index].webUrl;
     return {'headline': headline,'body': body, 'pageUrl': pageUrl};
   }
 
 
-  function createArticle(url, i) {
-  var data = httpGet(url);
-  var json = JSON.parse(data);
-  articleData = getArticleData(json, i);
-  article = new Article(articleData);
+  function createArticle(allArticleData, index) {
+  uniqueArticleData = getArticleData(allArticleData, index);
+  article = new Article(uniqueArticleData);
   return article;
 }
 
-
+  exports.generateArticleData = generateArticleData;
   exports.createArticle = createArticle;
+
 })(this);
