@@ -5,6 +5,10 @@ function generateImageTest() {
   assert.containsText(article.image, "https://media.guim.co.uk/5a074505dd963aa76329dfcd5916a0225f1bb9cc/0_0_1631_979/1000.jpg")
 }
 
+function articleDouble() {
+  
+}
+
 
 //
 // function createListOfNewsItems(){
