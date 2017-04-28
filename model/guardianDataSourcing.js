@@ -3,7 +3,7 @@
   function GuardianDataSourcing() {
 
     this.textSummary = new TextSummary();
-    
+
     GuardianDataSourcing.prototype.httpGet= function(theUrl) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
@@ -27,8 +27,8 @@
     GuardianDataSourcing.prototype.createArticle = function(allArticleData, index) {
     uniqueArticleData = this.getArticleData(allArticleData, index);
     article = new Article(uniqueArticleData);
-    article.generateSummary(textSummary);
-    article.generateImage();
+    // article.generateSummary(this.textSummary);
+    // article.generateImage();
     return article;
     }
   }
