@@ -24,6 +24,8 @@
   function createArticle(allArticleData, index) {
   uniqueArticleData = getArticleData(allArticleData, index);
   article = new Article(uniqueArticleData);
+  article.generateSummary();
+  article.generateImage();
   return article;
 }
 
