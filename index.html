@@ -9,40 +9,24 @@
 
   <body>
 
+    <script src='model/textSummary.js'></script>
+    <script src='model/article.js'></script>
+    <script src='model/guardianDataSourcing.js'></script>
+    <script src='model/article-list.js'></script>
+    <script src='controller/displayArticles.js'></script>
     <script src="controller/showSingleArticle.js"></script>
-    <!-- <script src="test.js"></script> -->
 
-    <h1>Noughty News</h1>
+    <div class='header-image-div'>
+      <img id='header-image' src='resources/images/headerImage.png'>
+    </div>
 
-    <!-- <script src="test.js"></script> -->
-    <script src='./model/textSummary.js'></script>'
-    <script src='./model/article.js'></script>'
-    <script src='./model/guardianDataSourcing.js'></script>'
-    <script src='./model/article-list.js'></script>'
+    <div class='sticky-header'>
+      <img id='sticky-header-image' src='resources/images/faviconImage.png'>
+      <h1 class='header-1' id='page-header'>Noughty News</h1>
+    </div>
 
+    <div class='news-container' id='news-container'>
+    </div>
 
-
-      <div class='header-image-div'>
-        <img id='header-image' src='resources/images/headerImage.png'>
-      </div>
-      <div class='sticky-header'>
-        <img id='sticky-header-image' src='resources/images/faviconImage.png'>
-        <h1 class='header-1' id='page-header'>Noughty News</h1>
-      </div>
-
-      <div class='news-container'>
-        <ul class='news-list'>
-          <li><a href="#page2">Page2</a></li>
-          <li><a href="#page3">Page2</a></li>
-        </ul>
-      </div>
-
-      <div class='article-div'>
-        <div class='image-port'>
-          <img class='news-image' src="https://i.ytimg.com/vi/qh7LLydY8eo/maxresdefault.jpg">
-        </div>
-        <h3>This is the Headline</h3>
-        <p>This is the really saucy summary</p>
-      </div>
   </body>
 </html>
