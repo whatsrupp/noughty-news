@@ -1,2 +1,2 @@
 displayArticles();
-makeUrlChangeShowNewsArticle()
+makeUrlChangeShowNewsArticle();

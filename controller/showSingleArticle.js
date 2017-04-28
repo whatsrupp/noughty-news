@@ -1,10 +1,5 @@
 (function(exports){
 
-  function makeUrlChangeShowNewsArticle(){
-
-    window.addEventListener("hashchange", showSinglePageArticle,false)
-  }
-
   function getArticleIdFromUrl (){
     return location.hash.slice(-1);
   }
@@ -44,19 +39,19 @@
     var articleBody = article.body;
 
     var articleWrapper = document.createElement('div');
-    articleWrapper.setAttribute('id', 'article-wrapper')
+    articleWrapper.setAttribute('id', 'article-wrapper');
 
     var headline = document.createElement('h3');
     headline.innerHTML = headlineText;
-    var headerDiv = document.createElement('div')
-    headerDiv.appendChild(headline)
+    var headerDiv = document.createElement('div');
+    headerDiv.appendChild(headline);
 
-    var bodyDiv = document.createElement('div')
+    var bodyDiv = document.createElement('div');
     bodyDiv.innerHTML = articleBody;
 
-    articleWrapper.appendChild(headerDiv)
-    articleWrapper.appendChild(bodyDiv)
+    articleWrapper.appendChild(headerDiv);
+    articleWrapper.appendChild(bodyDiv);
     document.body.appendChild(articleWrapper);
   }
-  exports.makeUrlChangeShowNewsArticle = makeUrlChangeShowNewsArticle
-})(this)
+  exports.showSinglePageArticle = showSinglePageArticle;
+})(this);

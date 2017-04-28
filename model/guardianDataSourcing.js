@@ -10,7 +10,7 @@
   function generateArticleData(url) {
     var data = httpGet(url);
     var allArticleData = JSON.parse(data);
-    return allArticleData
+    return allArticleData;
   }
 
   function getArticleData(allArticleData, index) {
@@ -24,7 +24,7 @@
   function createArticle(allArticleData, index) {
   uniqueArticleData = getArticleData(allArticleData, index);
   article = new Article(uniqueArticleData);
-  article.generateSummary();
+  // article.generateSummary();
   article.generateImage();
   return article;
 }
