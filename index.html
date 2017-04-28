@@ -9,24 +9,22 @@
 
   <body>
 
+    <div class='header-image-div'>
+      <img id='header-image' src='resources/images/headerImage.png'>
+    </div>
+
+    <div class='sticky-header' id='sticky-header'>
+      <img id='sticky-header-image' src='resources/images/faviconImage.png'>
+      <h1 class='header-1' id='page-header'>Noughty News</h1>
+    </div>
+
+
     <script src='model/textSummary.js'></script>
     <script src='model/article.js'></script>
     <script src='model/guardianDataSourcing.js'></script>
     <script src='model/article-list.js'></script>
     <script src='controller/displayArticles.js'></script>
     <script src="controller/showSingleArticle.js"></script>
-
-    <div class='header-image-div'>
-      <img id='header-image' src='resources/images/headerImage.png'>
-    </div>
-
-    <div class='sticky-header'>
-      <img id='sticky-header-image' src='resources/images/faviconImage.png'>
-      <h1 class='header-1' id='page-header'>Noughty News</h1>
-    </div>
-
-    <div class='news-container' id='news-container'>
-    </div>
-
+    <script src="controller/initializer.js"></script>
   </body>
 </html>

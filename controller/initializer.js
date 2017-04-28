@@ -1,0 +1,2 @@
+displayArticles();
+makeUrlChangeShowNewsArticle()
