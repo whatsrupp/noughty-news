@@ -1,13 +1,14 @@
 (function(exports) {
 
   function ArticleList() {
-    this.list = [];
+    this.listOfNewsArticles = [];
 
-  ArticleList.prototype.storeList = function (url) {
+    ArticleList.prototype.storeList = function (url) {
+      var allArticleData = generateArticleData(url);
       for (var i = 0; i < 10; i++) {
-        this.list.push(createArticle(url, i));
+        this.listOfNewsArticles.push(createArticle(allArticleData, i));
       }
-  };
+    };
 
   }
 exports.ArticleList = ArticleList;
