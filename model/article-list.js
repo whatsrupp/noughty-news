@@ -15,6 +15,6 @@
 exports.ArticleList = ArticleList;
 })(this);
 
-
-var articleList = new ArticleList();
-articleList.storeList('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/technology?show-fields=body');
+//
+// var articleList = new ArticleList();
+// articleList.storeList('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/technology?show-fields=body');
