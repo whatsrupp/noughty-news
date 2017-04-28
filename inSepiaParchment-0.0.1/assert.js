@@ -13,15 +13,22 @@ var assert = {
   },
 
   isArrayEqual: function(assertionToCheck, matcher) {
-    for (var i = 0; i < assertionToCheck].length; i++) {
+    for (var i = 0; i < assertionToCheck.length; i++) {
       if(assertionToCheck[i] !== matcher[i]) {
         throw new Error (assertionToCheck + " and " + matcher + "are identical arrays!")
       }
     }
   },
+
   isOfType: function(object, type) {
-    if ((typeof object) !== type) {
+    if((typeof object) !== type) {
       throw new Error(object + " is not a " + type + "!")
+    }
+  },
+
+  containsText: function(matcher, string) {
+    if(!matcher.includes(string)) {
+      throw new Error(matcher + " does not contain " + string);
     }
   }
 };
@@ -29,7 +36,7 @@ var assert = {
 function unitTest(test) {
   var success = true;
   try {
-    test();
+    test;
     document.write(testAction);
     document.write("<br>");
   }
