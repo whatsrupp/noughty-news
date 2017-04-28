@@ -16,8 +16,8 @@
 
   };
 
-  Article.prototype.generateSummary = function() {
-      this.summary = generateSentences(this.url);
+  Article.prototype.generateSummary = function(textSummary) {
+      this.summary = textSummary.generateSentences(this.url);
   };
 
   exports.Article = Article;

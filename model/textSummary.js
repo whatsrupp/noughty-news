@@ -1,28 +1,27 @@
 // testing Aylien API
 
-
 (function(exports) {
 
-  function aylienURL(theUrl) {
+  function TextSummary() {
+
+    TextSummary.prototype.aylienURL = function(theUrl) {
       var defaultURL = "http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=";
       var sentences_number = 1
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open( "GET", defaultURL + theUrl, false ); // false for synchronous request
       xmlHttp.send( null );
       return xmlHttp.responseText;
+    }
+
+    TextSummary.prototype.generateSentences = function(aUrl) {
+      var data = this.aylienURL(aUrl);
+      var json = JSON.parse(data);
+      var sentences = json.sentences[0] + " " + json.sentences[1];
+      return sentences;
+    }
   }
 
-function generateSentences(aUrl) {
-  var data = aylienURL(aUrl);
-  var json = JSON.parse(data);
-  var sentences = json.sentences[0] + " " + json.sentences[1];
-  return sentences;
-}
-
-
-
-exports.aylienURL = aylienURL;
-exports.generateSentences = generateSentences;
+exports.TextSummary = TextSummary;
 
 })(this);
 
