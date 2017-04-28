@@ -1,5 +1,4 @@
 
-
 dataString = function() {
     var mockArticleData = jQuery.parseJSON(JSON.stringify(data));
     return mockArticleData;
