@@ -11,7 +11,12 @@
   Article.prototype.generateImage = function() {
     div = document.createElement('div');
     div.innerHTML = this.body;
-    imageurl = div.getElementsByTagName('img')[0].src;
+    try {
+      imageurl = div.getElementsByTagName('img')[0].src;
+    }
+    catch(error) {
+      imageurl = 'resources/images/faviconImage.png'
+    }
     this.image = imageurl;
 
   };
