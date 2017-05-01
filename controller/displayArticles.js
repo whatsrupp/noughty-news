@@ -26,6 +26,10 @@
     var imageURL = article.image;
     var hyperLink = document.createElement('a')
     hyperLink.setAttribute('href', '#article'+ index)
+    hyperLink.setAttribute('class', 'article-link')
+
+    var articleDivContainer = document.createElement('div');
+    articleDivContainer.setAttribute('class','article-div-container');
 
     var articleDiv = document.createElement('div');
     articleDiv.setAttribute('class','article-div');
@@ -51,7 +55,8 @@
     articleDiv.appendChild(headline);
     articleDiv.appendChild(summary);
     hyperLink.appendChild(articleDiv);
-    newsContainer.appendChild(hyperLink);
+    articleDivContainer.appendChild(hyperLink)
+    newsContainer.appendChild(articleDivContainer);
     // var summary = document.createElement('p');
 
   }

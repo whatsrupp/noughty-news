@@ -10,9 +10,6 @@
   }
 
   function deleteArticlePage() {
-    var homeLink = document.getElementById('home-link');
-    var stickyHeader = document.getElementById('sticky-header');
-    stickyHeader.removeChild(homeLink);
     var articleWrapper = document.getElementById('article-wrapper');
     document.body.removeChild(articleWrapper);
   }

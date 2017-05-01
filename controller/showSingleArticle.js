@@ -12,24 +12,11 @@
   function showSinglePageArticle(){
       deleteHomePage();
       loadArticle();
-      addHomeButton();
   }
 
   function getArticle(){
     var index = getArticleIdFromUrl();
     return articleList.listOfNewsArticles[index];
-
-  }
-
-  function addHomeButton(){
-
-    var hyperLink = document.createElement('a');
-    hyperLink.setAttribute('id','home-link');
-    hyperLink.setAttribute('href','#home');
-    hyperLink.innerHTML = 'Home';
-
-    var stickyHeader = document.getElementById('sticky-header');
-    stickyHeader.appendChild(hyperLink);
 
   }
 
