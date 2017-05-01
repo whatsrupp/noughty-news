@@ -42,10 +42,12 @@
     image.setAttribute('src', imageURL );
 
     var headline = document.createElement('h3');
+    headline.setAttribute('class', 'headline')
     headline.innerHTML = headlineText;
 
     var summary = document.createElement('p');
     summary.innerHTML = summaryText;
+    summary.setAttribute('class','summary')
 
 
 
@@ -55,10 +57,7 @@
     articleDiv.appendChild(headline);
     articleDiv.appendChild(summary);
     hyperLink.appendChild(articleDiv);
-    articleDivContainer.appendChild(hyperLink)
-    newsContainer.appendChild(articleDivContainer);
-    // var summary = document.createElement('p');
-
+    newsContainer.appendChild(hyperLink);
   }
   exports.displayArticles = displayArticles;
 })(this)

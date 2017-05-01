@@ -30,7 +30,7 @@
     GuardianDataSourcing.prototype.createArticle = function(allArticleData, index) {
     uniqueArticleData = this.getArticleData(allArticleData, index);
     article = new Article(uniqueArticleData);
-    // article.generateSummary(this.textSummary);
+    article.generateSummary(this.textSummary);
     article.generateImage();
 
     return article;
