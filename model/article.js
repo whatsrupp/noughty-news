@@ -15,7 +15,7 @@
       imageurl = div.getElementsByTagName('img')[0].src;
     }
     catch(error) {
-      imageurl = 'resources/images/faviconImage.png';
+      imageurl = 'resources/images/39467552-newspaper.jpg';
     }
     this.image = imageurl;
 
